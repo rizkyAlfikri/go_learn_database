@@ -27,6 +27,12 @@ func TestExeSql(t *testing.T) {
 	fmt.Println("Success insert new customer")
 }
 
+/*
+	Query SQL
+	- Untuk operasi SQL yang tidak membutuhkan hasil, kita bisa menggunakan perintah Exec, namun jika membutuhkan result, seperti SELECT SQL, kita bisa menggunakan function yang berbeda
+	- Function untuk melakukan query ke database, bisa menggunakan (DB) QueryContext(context, sql, params)
+*/
+
 func TestQuerySQL(t *testing.T) {
 	db := GetConnection()
 	defer db.Close()
